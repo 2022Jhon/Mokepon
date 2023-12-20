@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8" />
+    <title>MOKEPON!👑</title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+
+    <br>
+    <br>
+    <h1 class="titulo">MOKEPON! 🔥💧🌱</h1>
+ 
+
+    <section id="seleccionar_Mascota">
+
+        <h2 class="subtitulo">Elige tu mascota🐾</h2>
+
+        
+
+        <div id ='contenedorTarjetas' class="tarjetas">
+            
+            <!--Codigo en javaScript-->
+            
+        </div>
+        <div>
+            <button id="boton-mascota">Seleccionar</button>
+        </div>
+      
+    </section>
+
+    <section id="verMapa">
+
+        <h3 class="tituloRecorreMapa">Recorre El Mapa Con Tu Mokepon</h3>
+        <canvas id="mapa" ></canvas>
+
+        <button ontouchstart="moverArriba()"  ontouchend="detenerMovimiento()" onmousedown="moverArriba()"  onmouseup="detenerMovimiento()" id="boton-mover" >ARRIBA</button>
+        <div>
+            <button ontouchstart="moverArriba()"  ontouchend="detenerMovimiento()" onmousedown="moverIzquierda()" onmouseup="detenerMovimiento()" id="boton-mover" >IZQUIERDA</button>
+            <button ontouchstart="moverArriba()"  ontouchend="detenerMovimiento()" onmousedown="moverAbajo()"  onmouseup="detenerMovimiento()" id="boton-mover">ABAJO</button>
+            <button ontouchstart="moverArriba()"  ontouchend="detenerMovimiento()" onmousedown="moverDerecha()"  onmouseup="detenerMovimiento()" id="boton-mover">DERECHA</button>
+        </div>
+    </section>
+
+    <section id="botonesMover">
+
+       
+
+        
+    </section>
+
+    <section id="seleccionar_Ataque">
+
+        <div id = 'contenedorAtaques' class="botones_Ataque">
+
+            <h2 class="subtitulo" >Elige tu ataque 🎇: ‎ </h2>
+
+            <!--Codigo en JavaScript-->
+
+            <div id="ImagenDeMokepon"></div>
+            
+        </div>
+
+        
+        <div id="mensajes">
+
+            <p id="resultado">✨MUCHOS EXITOS✨</p>
+
+            <section id="reiniciar">
+
+                <button id="boton-reiniciar">
+                <img src="Imagenes/reiniciar.png">
+                </button>
+    
+            </section>
+
+        </div>
+            
+        
+
+        <div class="ataques">
+            
+            <!-- Jugador -->
+           
+            <div class="ataquesJugador">
+                <p id="mascotaJugador"></p>
+                
+                <p id="vidasJugador"><b><span style="font-size: 30px;">0</span></b></p> vidas <p id="corazonesJugador">👀</p>
+                
+                <p>________________</p>
+
+                <div id="ataqueDelJugador"></div>
+
+            </div>
+
+            <!-- Enemigo -->
+
+            <div class="ataquesEnemigo">
+
+                <p id="mascotaEnemigo"></p>
+
+                <p id="vidasEnemigo"><b><span style="font-size: 30px;">0</span></b></p> vidas <p id="corazonesEnemigo">👀</p>
+
+                <p>________________</p>
+                
+                <div id="ataqueDelEnemigo"></div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    
+    <!--Codigo JavaScript-->
+
+    <script src="./js/mokepon.js"></script>
+
+</body>
+
+</html>

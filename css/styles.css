@@ -1,0 +1,295 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Lobster&family=Righteous&display=swap');
+
+
+body{
+
+    background-image: url(./Fondo/fondo.jpg);
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow: hidden;
+    
+}
+
+.titulo{
+
+    font-family: 'Bangers', cursive;
+    color: RGB(12,31,108);
+    text-align:center;
+    font-size: 44px;
+    width: auto;
+    height: 59px;
+    background-image: linear-gradient(rgb(249, 226, 175), rgb(0, 159, 189));
+    margin: -44px;
+    margin-bottom: 80px;
+    
+}
+.tituloRecorreMapa{
+
+    font-family: 'Bangers', cursive;
+    color: RGB(12,31,108);
+    text-align:center;
+    font-size: 44px;
+    width: auto;
+    height: 59px;
+    background-image: linear-gradient(rgb(249, 226, 175), rgb(0, 159, 189));
+    background-size: cover;
+    margin: 8px;
+    margin-bottom: 32px;
+}
+
+.subtitulo{
+
+    font-family: 'Lobster', cursive;
+    height: 20px;
+    font-size: 38px;
+    margin-bottom: 91px;
+    margin-top: 106px;
+
+}
+
+#seleccionar_Mascota{
+    
+    text-align:center;
+    font-family: 'Righteous', cursive;
+}
+
+
+#resultado{
+
+    display: flex;
+    justify-content: center;
+
+}
+
+#boton-mascota{
+
+    width: 138px;
+    height: 65px;
+    background-image: linear-gradient(rgb(214, 216, 225), rgb(72, 215, 122));
+    border: none;
+    padding: 8px 17px;
+    border-radius: 5px;
+    margin: 90px;
+    font-family: 'Righteous', cursive;
+    font-size: 21px;
+
+}
+
+#boton-reiniciar {
+
+    background-image: linear-gradient(rgb(62, 97, 237), rgb(185, 218, 93));
+    padding: 10px 20px;
+    border: 2px solid black;
+    border-radius: 108px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    font-size: 17px;
+
+}
+
+#seleccionar_Ataque{
+
+    justify-content: space-around;
+    align-items: flex-start;
+    
+}
+
+
+input{
+
+    width: 40px;
+    height: 20px;
+
+}
+
+
+#boton-fuego, #boton-agua, #boton-tierra{
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 32px;
+    margin-bottom: 86px;
+    padding: 1px;
+    box-sizing: border-box;
+    border-radius: 100px;
+
+}
+
+.tarjetas{
+
+    display: flex; 
+    justify-content: center;
+    gap: 10px;
+
+}
+
+
+.tarjetasMokepon{
+
+    width: 181px;
+    padding: 2px;
+    box-sizing: border-box;
+    margin: 10px;
+    border-radius: 3px;
+    background-color:#161e80;
+    color: white;
+    display: flex;
+    align-items: center;
+
+}
+
+#ImagenDeMokepon{
+
+    font-family: 'Righteous', cursive;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    border-color: transparent;
+    margin: 26px;
+}
+
+#ImagenDeMokepon img {
+    width: 56%;
+    height: auto;
+}
+
+
+/*BAJAR TAMAÑO DE IMAGEN*/
+
+.tarjetasMokepon img{
+
+    width: 181px;
+    height: 86px;
+}
+
+input {
+    display: none;
+}
+
+input:hover + label {
+
+    background-color: #E55807;
+}
+input:checked + label {
+
+    background-color: #009FBD;
+    color: black;
+}
+
+.botones_Ataque button:hover {
+   
+    background-color: #19A7CE;
+}
+
+#mensajes{
+    
+    font-family: 'Righteous', cursive;
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: #161e80;
+    width: 260px;
+    height: 189px;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+.ataques{
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 128px 128px;
+    border: 2px solid black;
+    justify-content: center;
+    align-items: center;
+    background-color: #47A992;
+
+}
+
+.ataques > :nth-child(1) {
+    font-size: medium;
+    border-right: 2px solid black;
+}
+
+.ataquesJugador, .ataquesEnemigo{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#verMapa{
+   flex-direction: column; 
+   align-items: center;
+   justify-content: center;
+   
+}
+
+#verMapa button{
+
+    width: 135px;
+    height: 43px;
+    margin: 9px;
+    box-sizing: border-box;
+    background-image: linear-gradient(rgb(32, 235, 208), rgb(115, 41, 227));
+    font-family: 'Righteous', cursive;
+    font-size: 23px;
+    border: transparent;
+    border-radius: 5px;
+
+}
+
+#mapa{
+    margin-bottom: 22px;
+}
+
+
+/* Dejar la pagina web resposiva*/
+
+@media (max-width: 360px){
+
+    body{
+        overflow: auto;
+    }
+
+   .tarjetas{
+    flex-direction: column;
+    align-items: center
+    }
+
+   .botones_Ataque, #seleccionar_Ataque{
+        flex-direction: column;
+        align-items: center
+        
+    }
+  
+    #verMapa div{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        
+    }
+
+    .titulo, .tituloRecorreMapa {
+        font-size: 24px;
+        height: 32px;
+        margin-bottom: 28px;
+    }
+
+    .tarjetasMokepon {
+        width: 55%;
+        margin: -7px;
+    }
+
+    #boton-mascota {
+        width: 81%;
+        margin: 1px;
+    }
+
+}
+
